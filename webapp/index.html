@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dragon Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <img class="header-logo" src="https://zwuwwu.pythonanywhere.com/img/408682797bd54297aeb008b527b6afa6.jpg" alt="Dragon Shop">
+            <div class="shop-name">Dragon Shop</div>
+            <button class="search-btn" onclick="toggleSearch()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="17" y1="17" x2="21" y2="21"></line>
+                </svg>
+            </button>
+        </header>
+
+        <div class="search-panel" id="searchPanel">
+            <label class="search-label">Ключевые слова</label>
+            <input type="text" class="search-field" id="searchKeyword" placeholder="Название, вкус, бренд...">
+            <label class="search-label">Цена, BYN</label>
+            <div class="search-row">
+                <input type="number" class="search-field" id="searchPriceFrom" placeholder="от">
+                <input type="number" class="search-field" id="searchPriceTo" placeholder="до">
+            </div>
+            <button class="search-find" onclick="doSearch()">Найти</button>
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-text">У нас есть всё, что тебе нужно:<br>жидкости, одноразки, поды и многое другое</div>
+        </div>
+
+        <div class="feature-big">ОПЛАТА<span>наличными, переводом</span></div>
+        <div class="feature-big">ДОСТАВКА</div>
+        <div class="feature-big">ВСТРЕЧА</div>
+
+        <a href="catalog.html" class="btn-main">Смотреть каталог</a>
+
+        <div class="categories-section">
+            <div class="section-title">Категории</div>
+            <div class="categories-list">
+                <a href="catalog.html?cat=liquids" class="category-big">
+                    <div class="category-big-img">💧</div>
+                    <div class="category-big-name">Жидкости</div>
+                </a>
+                <a href="catalog.html?cat=disposables" class="category-big">
+                    <div class="category-big-img">💨</div>
+                    <div class="category-big-name">Одноразки</div>
+                </a>
+                <a href="catalog.html?cat=pods" class="category-big">
+                    <div class="category-big-img">🔌</div>
+                    <div class="category-big-name">Поды</div>
+                </a>
+                <a href="catalog.html?cat=consumables" class="category-big">
+                    <div class="category-big-img">📦</div>
+                    <div class="category-big-name">Расходники</div>
+                </a>
+                <a href="catalog.html?cat=snus" class="category-big">
+                    <div class="category-big-img">🌿</div>
+                    <div class="category-big-name">Снюс</div>
+                </a>
+                <a href="catalog.html?cat=plates" class="category-big">
+                    <div class="category-big-img">🍬</div>
+                    <div class="category-big-name">Пластинки</div>
+                </a>
+                <a href="catalog.html?cat=boosters" class="category-big">
+                    <div class="category-big-img">⚡</div>
+                    <div class="category-big-name">Никобустеры</div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="catalog.html" class="nav-item">
+                <span class="nav-icon">◫</span><span>Каталог</span>
+            </a>
+            <a href="favorites.html" class="nav-item">
+                <span class="nav-icon">♡</span><span>Избранное</span>
+            </a>
+            <a href="index.html" class="nav-item active">
+                <span class="nav-icon">◯</span><span>Главная</span>
+            </a>
+            <a href="cart.html" class="nav-item">
+                <span class="nav-icon">◻</span><span>Корзина</span>
+                <span class="nav-badge" id="navBadge"></span>
+            </a>
+            <a href="orders.html" class="nav-item">
+                <span class="nav-icon">≡</span><span>Заказы</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

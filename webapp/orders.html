@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Заказы — Dragon Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <img class="header-logo" src="https://zwuwwu.pythonanywhere.com/img/408682797bd54297aeb008b527b6afa6.jpg" alt="Dragon Shop">
+            <div class="shop-name">Dragon Shop</div>
+            <button class="search-btn" onclick="location.href='catalog.html'">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="17" y1="17" x2="21" y2="21"></line>
+                </svg>
+            </button>
+        </header>
+
+        <div class="cart-header"><div class="cart-title">Мои заказы</div></div>
+        <div id="ordersContent"></div>
+
+        <div class="manager-modal" id="managerModal" onclick="if(event.target===this)closeManagerModal()">
+            <div class="manager-sheet">
+                <div class="manager-title">Связаться с менеджером</div>
+                <a class="manager-btn" id="managerTgLink" href="https://t.me/managers909" target="_blank">Открыть @managers909</a>
+                <textarea class="manager-textarea" id="managerMessage"></textarea>
+                <button class="manager-send" onclick="sendManagerMessage()">Отправить</button>
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="catalog.html" class="nav-item"><span class="nav-icon">◫</span><span>Каталог</span></a>
+            <a href="favorites.html" class="nav-item"><span class="nav-icon">♡</span><span>Избранное</span></a>
+            <a href="index.html" class="nav-item"><span class="nav-icon">◯</span><span>Главная</span></a>
+            <a href="cart.html" class="nav-item"><span class="nav-icon">◻</span><span>Корзина</span><span class="nav-badge" id="navBadge"></span></a>
+            <a href="orders.html" class="nav-item active"><span class="nav-icon">≡</span><span>Заказы</span></a>
+        </nav>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

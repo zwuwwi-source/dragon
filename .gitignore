@@ -1,0 +1,32 @@
+# Секреты
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+
+# Данные магазина (не коммитим!)
+products.json
+promos.json
+orders.json
+users.json
+reviews.json
+order_counter.txt
+
+# Загруженные фото
+uploads/
+
+# Vercel
+.vercel/
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
